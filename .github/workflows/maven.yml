@@ -38,4 +38,4 @@ jobs:
       uses: JamesIves/github-pages-deploy-action@v4.5.0
       with:
         branch: main
-        folder: ./target/ExtentReport/Reports
+        folder: ./target/ExtentReports/
