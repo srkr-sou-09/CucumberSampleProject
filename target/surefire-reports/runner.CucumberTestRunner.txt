@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: runner.CucumberTestRunner
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.002 s <<< FAILURE! - in runner.CucumberTestRunner
+initializationError(runner.CucumberTestRunner)  Time elapsed: 0.002 s  <<< ERROR!
+io.cucumber.core.exception.CucumberException: io.cucumber.core.exception.CucumberException: The io.cucumber.core.plugin.TimelineFormatter needs an existing directory. Not a directory: C:\Users\SOUVIK SARKAR\IdeaProjects\sampleBDDCucumber\<report folder>
+Caused by: io.cucumber.core.exception.CucumberException: The io.cucumber.core.plugin.TimelineFormatter needs an existing directory. Not a directory: C:\Users\SOUVIK SARKAR\IdeaProjects\sampleBDDCucumber\<report folder>
+
