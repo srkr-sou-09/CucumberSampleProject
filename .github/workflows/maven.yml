@@ -39,7 +39,10 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: Test-Reports
-        path: target/ExtentReports/PublishExtentReport.html
+        path: |
+          target/spark
+          target/ExtentReports/PublishExtentReport.html
+          target/ExtentReports/PublishExtentReport.pdf
 
     - name: Deploy pages
       uses: JamesIves/github-pages-deploy-action@v4.5.0
