@@ -38,8 +38,8 @@ jobs:
       if: always()
       uses: actions/upload-artifact@v4
       with:
-        branch: Test-Reports
-        folder: ./target/ExtentReports/publishExtentReport.html
+        name: Test-Reports
+        path: ./target/ExtentReports/publishExtentReport.html
 
     - name: Deploy pages
       uses: JamesIves/github-pages-deploy-action@v4.5.0
