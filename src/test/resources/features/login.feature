@@ -22,7 +22,7 @@ Feature: As a user of application I want to validate login functionality
   Scenario: Validate login functionality with invalid credentials
     When user entered the credentials
       |userName       |Password       |
-      |standard_user2  |secret_sauce   |
+      |standard_user  |secret_sauce   |
     And user has clicked on Login button
     Then user verify "Products" on Dashboard
     And close the browser
