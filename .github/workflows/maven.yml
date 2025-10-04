@@ -40,7 +40,7 @@ jobs:
       with:
         name: Test-Reports
         path: |
-          target/spark/*.*
+          target/ExtentReports/spark/*.*
           target/ExtentReports/PublishExtentReport.html
           target/ExtentReports/PublishExtentReport.pdf
 
