@@ -44,6 +44,13 @@ jobs:
           target/ExtentReports/PublishExtentReport.html
           target/ExtentReports/PublishExtentReport.pdf
 
+    - name: Upload Allure reports
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: Allure-Reports
+        path: allure-results
+
     - name: Deploy pages
       uses: JamesIves/github-pages-deploy-action@v4.5.0
       with:
