@@ -14,7 +14,7 @@
         <junit.version>4.13.1</junit.version>
         <testng.version>6.9.1</testng.version>
         <selenium.version>4.10.0</selenium.version>
-        <selenium.webDriverManager.version>6.2.0</selenium.webDriverManager.version>
+        <selenium.webDriverManager.version>6.3.2</selenium.webDriverManager.version>
         <cucumber.extentreport.version>1.14.0</cucumber.extentreport.version>
         <cucumber.allure.version>2.30.0</cucumber.allure.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

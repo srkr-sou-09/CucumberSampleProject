@@ -1,23 +1,26 @@
 package browserManager;
 
+import enums.GlobalPropertiesEnums;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
+import utilities.properties.GlobalSettingsManager;
 
 public class EdgeManager implements BrowserManager {
     @Override
     public WebDriver getDriver() {
-        try{
+        try {
             WebDriverManager.edgedriver().setup();
-            return new EdgeDriver();
-        }catch (Exception ex){
-            if(System.getProperty("os.name").toLowerCase().contains("linux")){
-                System.setProperty("webdriver.edge.driver",System.getProperty("user.dir")+"/src/test/resources/drivers/msedgedriverLinux");
-            }else if(System.getProperty("os.name").toLowerCase().contains("windows")){
-                System.setProperty("webdriver.edge.driver",System.getProperty("user.dir")+"/src/test/resources/drivers/msedgedriver.exe");
-            }
+            GlobalSettingsManager globalSettingsManager = new GlobalSettingsManager();
+            EdgeOptions edgeOptions  = new EdgeOptions ();
+            if (globalSettingsManager.getGlobalSettingsPropertiesValue(GlobalPropertiesEnums.HEADLESS_BROWSER).equalsIgnoreCase("y"))
+                edgeOptions.addArguments("--headless");
+            return new EdgeDriver(edgeOptions);
 
-            return new EdgeDriver();
+        }catch (Exception ex){
+            System.out.println(ex.getMessage());
         }
+        return new EdgeDriver();
     }
 }
