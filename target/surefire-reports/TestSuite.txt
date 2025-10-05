@@ -1,16 +1,67 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 7, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 45.711 s <<< FAILURE! - in TestSuite
-runScenario(runner.TestNGCucumberRunner)  Time elapsed: 34.107 s  <<< FAILURE!
-org.openqa.selenium.NoSuchElementException: 
-no such element: Unable to locate element: {"method":"xpath","selector":"//span[text()='Products']"}
-  (Session info: chrome=140.0.7339.208)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Tests run: 56, Failures: 7, Errors: 0, Skipped: 42, Time elapsed: 84.561 s <<< FAILURE! - in TestSuite
+runScenario(runner.TestNGCucumberRunner)  Time elapsed: 0.511 s  <<< FAILURE!
+org.openqa.selenium.remote.NoSuchDriverException: Unable to obtain: Capabilities {browserName: MicrosoftEdge, ms:edgeOptions: {args: [--remote-allow-origins=*], extensions: []}}
+Caused by: org.openqa.selenium.WebDriverException: 
+Unsuccessful command executed: [C:\Users\SOUVIK~1\AppData\Local\Temp\selenium-manager37284525488920017678365626668851431\selenium-manager.exe, --browser, MicrosoftEdge, --output, json]
+error sending request for url (https://msedgedriver.azureedge.net/LATEST_RELEASE_141_WINDOWS): error trying to connect: dns error: No such host is known. (os error 11001)
 Build info: version: '4.10.0', revision: 'c14d967899'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [1b446431e02a6c591cfd43c27f111fd9, findElement {using=xpath, value=//span[text()='Products']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.208, chrome: {chromedriverVersion: 140.0.7339.207 (17230b545fd..., userDataDir: C:\Users\SOUVIK~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60544}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60544/devtoo..., se:cdpVersion: 140.0.7339.208, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 1b446431e02a6c591cfd43c27f111fd9
+Driver info: driver.version: CreateDriver
+
+runScenario(runner.TestNGCucumberRunner)  Time elapsed: 0.451 s  <<< FAILURE!
+org.openqa.selenium.remote.NoSuchDriverException: Unable to obtain: Capabilities {browserName: MicrosoftEdge, ms:edgeOptions: {args: [--remote-allow-origins=*], extensions: []}}
+Caused by: org.openqa.selenium.WebDriverException: 
+Unsuccessful command executed: [C:\Users\SOUVIK~1\AppData\Local\Temp\selenium-manager37284525488920017678365626668851431\selenium-manager.exe, --browser, MicrosoftEdge, --output, json]
+error sending request for url (https://msedgedriver.azureedge.net/LATEST_RELEASE_141_WINDOWS): error trying to connect: dns error: No such host is known. (os error 11001)
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
+Driver info: driver.version: CreateDriver
+
+runScenario(runner.TestNGCucumberRunner)  Time elapsed: 0.519 s  <<< FAILURE!
+org.openqa.selenium.remote.NoSuchDriverException: Unable to obtain: Capabilities {browserName: MicrosoftEdge, ms:edgeOptions: {args: [--remote-allow-origins=*], extensions: []}}
+Caused by: org.openqa.selenium.WebDriverException: 
+Unsuccessful command executed: [C:\Users\SOUVIK~1\AppData\Local\Temp\selenium-manager37284525488920017678365626668851431\selenium-manager.exe, --browser, MicrosoftEdge, --output, json]
+error sending request for url (https://msedgedriver.azureedge.net/LATEST_RELEASE_141_WINDOWS): error trying to connect: dns error: No such host is known. (os error 11001)
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
+Driver info: driver.version: CreateDriver
+
+runScenario(runner.TestNGCucumberRunner)  Time elapsed: 2.189 s  <<< FAILURE!
+org.openqa.selenium.remote.NoSuchDriverException: Unable to obtain: Capabilities {browserName: MicrosoftEdge, ms:edgeOptions: {args: [--remote-allow-origins=*], extensions: []}}
+Caused by: org.openqa.selenium.WebDriverException: 
+Unsuccessful command executed: [C:\Users\SOUVIK~1\AppData\Local\Temp\selenium-manager37284525488920017678365626668851431\selenium-manager.exe, --browser, MicrosoftEdge, --output, json]
+error sending request for url (https://msedgedriver.azureedge.net/LATEST_RELEASE_141_WINDOWS): error trying to connect: dns error: No such host is known. (os error 11001)
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
+Driver info: driver.version: CreateDriver
+
+runScenario(runner.TestNGCucumberRunner)  Time elapsed: 1.539 s  <<< FAILURE!
+org.openqa.selenium.remote.NoSuchDriverException: Unable to obtain: Capabilities {browserName: MicrosoftEdge, ms:edgeOptions: {args: [--remote-allow-origins=*], extensions: []}}
+Caused by: org.openqa.selenium.WebDriverException: 
+Unsuccessful command executed: [C:\Users\SOUVIK~1\AppData\Local\Temp\selenium-manager37284525488920017678365626668851431\selenium-manager.exe, --browser, MicrosoftEdge, --output, json]
+error sending request for url (https://msedgedriver.azureedge.net/LATEST_RELEASE_141_WINDOWS): error trying to connect: dns error: No such host is known. (os error 11001)
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
+Driver info: driver.version: CreateDriver
+
+runScenario(runner.TestNGCucumberRunner)  Time elapsed: 1.242 s  <<< FAILURE!
+org.openqa.selenium.remote.NoSuchDriverException: Unable to obtain: Capabilities {browserName: MicrosoftEdge, ms:edgeOptions: {args: [--remote-allow-origins=*], extensions: []}}
+Caused by: org.openqa.selenium.WebDriverException: 
+Unsuccessful command executed: [C:\Users\SOUVIK~1\AppData\Local\Temp\selenium-manager37284525488920017678365626668851431\selenium-manager.exe, --browser, MicrosoftEdge, --output, json]
+error sending request for url (https://msedgedriver.azureedge.net/LATEST_RELEASE_141_WINDOWS): error trying to connect: dns error: No such host is known. (os error 11001)
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
+Driver info: driver.version: CreateDriver
+
+runScenario(runner.TestNGCucumberRunner)  Time elapsed: 2.813 s  <<< FAILURE!
+org.openqa.selenium.remote.NoSuchDriverException: Unable to obtain: Capabilities {browserName: MicrosoftEdge, ms:edgeOptions: {args: [--remote-allow-origins=*], extensions: []}}
+Caused by: org.openqa.selenium.WebDriverException: 
+Unsuccessful command executed: [C:\Users\SOUVIK~1\AppData\Local\Temp\selenium-manager37284525488920017678365626668851431\selenium-manager.exe, --browser, MicrosoftEdge, --output, json]
+error sending request for url (https://msedgedriver.azureedge.net/LATEST_RELEASE_141_WINDOWS): error trying to connect: dns error: No such host is known. (os error 11001)
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
+Driver info: driver.version: CreateDriver
 
