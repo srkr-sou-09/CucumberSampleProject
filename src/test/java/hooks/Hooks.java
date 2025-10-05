@@ -3,7 +3,6 @@ package hooks;
 
 import com.aventstack.extentreports.service.ExtentService;
 import driverManager.CreateDriver;
-import enums.BrowsersNames;
 import io.cucumber.java.*;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -14,11 +13,11 @@ public class Hooks {
 
     @Before()
     public void setUp(Scenario scenario){
-        CreateDriver.getInstance().setDriver(BrowsersNames.CHROME);
+        CreateDriver.getInstance().setDriver(CreateDriver.getBrowserName());
         driver = CreateDriver.getInstance().getDriver();
         System.out.println("Before each scenario");
         System.out.println(scenario.getId()+ "--> Execution started----------------------------------");
-        ExtentService.getInstance().setSystemInfo("os",System.getProperty("os.name")+"::"+System.getProperty("os.version"));
+        ExtentService.getInstance().setSystemInfo("os",System.getProperty("os.name")+"::"+System.getProperty("os.version")+"::"+CreateDriver.getBrowserName());
     }
 
     @After()
@@ -39,7 +38,7 @@ public class Hooks {
     public void commonStepAfterEachStep(Scenario scenario){
         TakesScreenshot takesScreenshot = (TakesScreenshot) driver;
         byte[] screenshot = takesScreenshot.getScreenshotAs(OutputType.BYTES);
-        scenario.attach(screenshot,"image/png", screenshot.toString());
+        scenario.attach(screenshot,"image/png", screenshot.toString()+CreateDriver.getBrowserName());
        // Allure.addAttachment("step Screenshot",new ByteArrayInputStream(screenshot));
 
 

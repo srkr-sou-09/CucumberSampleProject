@@ -23,6 +23,7 @@ Feature: As a user of application I want to validate login functionality
     When user entered the credentials
       |userName       |Password       |
       |standard_user  |secret_sauce   |
+      |visual_user    |secret_sauce   |
     And user has clicked on Login button
     Then user verify "Products" on Dashboard
     And close the browser
