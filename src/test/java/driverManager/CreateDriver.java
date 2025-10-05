@@ -9,6 +9,16 @@ public class CreateDriver {
     private ThreadLocal<WebDriver> driver = new ThreadLocal<>();
     private static CreateDriver Driver_Instance = null;
 
+    private static BrowsersNames browserName;
+
+    public static BrowsersNames getBrowserName() {
+        return browserName;
+    }
+
+    public static void setBrowserName(BrowsersNames browserName) {
+        CreateDriver.browserName = browserName;
+    }
+
     private CreateDriver(){}
 
     public static synchronized CreateDriver getInstance(){
@@ -32,7 +42,7 @@ public class CreateDriver {
                 throw new IllegalArgumentException("Invalid browserName");
         }*/
        //driver = DriverManager.getBrowserManager(browserName).getDriver();
-
+        browserName = getBrowserName();
         driver.set(DriverManager.getBrowserManager(browserName).getDriver());
     }
 

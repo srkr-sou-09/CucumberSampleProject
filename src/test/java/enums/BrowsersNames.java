@@ -1,5 +1,5 @@
 package enums;
 
 public enum BrowsersNames {
-    CHROME,FIREFOX
+    CHROME,FIREFOX,EDGE;
 }

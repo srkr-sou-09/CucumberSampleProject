@@ -1,6 +1,8 @@
 package runner;
 
 
+import driverManager.CreateDriver;
+import enums.BrowsersNames;
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 import org.testng.ITestContext;
@@ -67,7 +69,16 @@ public class TestNGCucumberRunner extends AbstractTestNGCucumberTests {
         }
 
         @BeforeTest
-        public synchronized void beforeTest(){
+        @Parameters({"browser"})
+        public synchronized void beforeTest(String browser){
+                if(browser.equalsIgnoreCase(BrowsersNames.CHROME.toString())){
+                        CreateDriver.setBrowserName(BrowsersNames.CHROME);
+                }else if(browser.equalsIgnoreCase(BrowsersNames.FIREFOX.name())){
+                        CreateDriver.setBrowserName(BrowsersNames.FIREFOX);
+                }
+                else if(browser.equalsIgnoreCase(BrowsersNames.EDGE.name())){
+                        CreateDriver.setBrowserName(BrowsersNames.EDGE);
+                }
                 System.out.println(new Object(){}.getClass().getEnclosingMethod().getName());
                 System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName());
         }

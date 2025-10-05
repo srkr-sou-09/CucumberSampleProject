@@ -2,6 +2,7 @@ package driverManager;
 
 import browserManager.BrowserManager;
 import browserManager.ChromeManager;
+import browserManager.EdgeManager;
 import browserManager.FireFoxManager;
 import enums.BrowsersNames;
 
@@ -13,6 +14,8 @@ public class DriverManager {
                 return new ChromeManager();
             case "firefox":
                 return new FireFoxManager();
+            case "edge":
+                return new EdgeManager();
             default:
                 throw new IllegalArgumentException("no Matching browser found");
         }
