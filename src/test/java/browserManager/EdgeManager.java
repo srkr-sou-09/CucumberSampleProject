@@ -11,7 +11,12 @@ public class EdgeManager implements BrowserManager {
             WebDriverManager.edgedriver().setup();
             return new EdgeDriver();
         }catch (Exception ex){
-            System.setProperty("webdriver.edge.driver",System.getProperty("user.dir")+"/src/test/resources/drivers/msedgedriver.exe");
+            if(System.getProperty("os.name").toLowerCase().contains("linux")){
+                System.setProperty("webdriver.edge.driver",System.getProperty("user.dir")+"/src/test/resources/drivers/msedgedriver_linux.exe");
+            }else if(System.getProperty("os.name").toLowerCase().contains("windows")){
+                System.setProperty("webdriver.edge.driver",System.getProperty("user.dir")+"/src/test/resources/drivers/msedgedriver.exe");
+            }
+
             return new EdgeDriver();
         }
     }
