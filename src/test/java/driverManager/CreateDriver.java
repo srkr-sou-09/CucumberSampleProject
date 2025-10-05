@@ -42,7 +42,6 @@ public class CreateDriver {
                 throw new IllegalArgumentException("Invalid browserName");
         }*/
        //driver = DriverManager.getBrowserManager(browserName).getDriver();
-        browserName = getBrowserName();
         driver.set(DriverManager.getBrowserManager(browserName).getDriver());
     }
 
